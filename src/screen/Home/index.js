@@ -5,7 +5,7 @@ import {
   Image,
   ScrollView,
   TouchableOpacity,
-  Platform
+  Platform,
 } from "react-native";
 import styles from "./styles";
 import { Storage } from "../../store/index";
@@ -24,14 +24,14 @@ export default class Home extends Component {
     headerTitleStyle: {
       width: "100%",
       textAlign: "center",
-      fontWeight: "bold"
-    }
+      fontWeight: "bold",
+    },
   };
   render() {
     return (
-      <KeyboardAwareScrollView>
-        <LinearGradient colors={["#fff", "#B8DBD6"]} style={styles.container}>
-          <Image source={Images.logo} style={styles.logo} />
+      <LinearGradient colors={["#fff", "#B8DBD6"]} style={styles.container}>
+        <Image source={Images.logo} style={styles.logo} />
+        <ScrollView contentContainerStyle={{ flex: 1, }}>
           <TouchableOpacity
             style={styles.box1}
             onPress={() => this.props.navigation.navigate("ChooseType")}
@@ -47,8 +47,8 @@ export default class Home extends Component {
             <Image source={Images.iconPokemon} style={styles.logoIcon} />
             <Text style={styles.text}>Pokémon Name</Text>
           </TouchableOpacity>
-        </LinearGradient>
-      </KeyboardAwareScrollView>
+        </ScrollView>
+      </LinearGradient>
     );
   }
 }

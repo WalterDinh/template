@@ -1,7 +1,6 @@
 export default {
   container: {
-    flex: 1,
-    justifyContent: "center",
+    flex:1,   
     alignItems: "center"
   },
   scroll: {
@@ -22,7 +21,7 @@ export default {
     resizeMode: "contain"
   },
   box1: {
-    width: "45%",
+    width: "40%",
     height: 200,
     justifyContent: "center",
     alignItems: "center"
